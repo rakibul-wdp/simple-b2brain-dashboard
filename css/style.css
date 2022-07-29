@@ -110,6 +110,9 @@ nav .menu-items {
   border-radius: 50%;
   background-color: var(--primary-color);
 }
+body.dark li a:hover::before {
+  background-color: var(--text-color);
+}
 .menu-items li a i {
   font-size: 24px;
   min-width: 45px;
@@ -132,6 +135,10 @@ nav.close li a .link-name {
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
   color: var(--primary-color);
+}
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name {
+  color: var(--text-color);
 }
 .menu-items .logout-mode {
   padding-top: 10px;
@@ -210,4 +217,37 @@ nav.close ~ .dashboard .top {
   font-size: 26px;
   color: var(--text-color);
   cursor: pointer;
+}
+.dashboard .top .search-box {
+  position: relative;
+  height: 45px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 30px;
+}
+.top .search-box input {
+  position: absolute;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  padding: 0 25px 0 50px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+}
+.top .search-box i {
+  position: absolute;
+  left: 15px;
+  font-size: 22px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--black-light-color);
+}
+.top img {
+  width: 40px;
+  border-radius: 50%;
 }
