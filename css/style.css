@@ -26,6 +26,7 @@
   --tran-03: all 0.2s ease;
 }
 
+/* body style start here */
 body {
   min-height: 100vh;
   background-color: var(--primary-color);
@@ -42,6 +43,7 @@ body.dark {
   --box3-color: #3a3b3c;
   --title-icon-color: #ccc;
 }
+/* nav style start here */
 nav {
   position: fixed;
   top: 0;
@@ -50,6 +52,11 @@ nav {
   width: 250px;
   padding: 10px 14px;
   background-color: var(--panel-color);
+  border-right: 1px solid var(--border-color);
+  transition: var(--tran-05);
+}
+nav.close {
+  width: 73px;
 }
 nav .logo-name {
   display: flex;
@@ -71,6 +78,11 @@ nav .logo-name .logo_name {
   font-weight: 600;
   color: var(--text-color);
   margin-left: 14px;
+  transition: var(--tran-05);
+}
+nav.close .logo_name {
+  opacity: 0;
+  pointer-events: none;
 }
 nav .menu-items {
   margin-top: 40px;
@@ -111,14 +123,24 @@ nav .menu-items {
   font-size: 18px;
   font-weight: 400;
   color: var(--black-light-color);
+  transition: var(--tran-05);
+}
+nav.close li a .link-name {
+  opacity: 0;
+  pointer-events: none;
 }
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
   color: var(--primary-color);
 }
+.menu-items .logout-mode {
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
 .menu-items .mode {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .menu-items .mode-toggle {
   position: absolute;
@@ -152,4 +174,40 @@ nav .menu-items {
 }
 body.dark .switch::before {
   left: 20px;
+}
+
+/* dashboard style start here */
+.dashboard {
+  position: relative;
+  left: 250px;
+  background-color: var(--panel-color);
+  min-height: 100vh;
+  width: calc(100% - 250px);
+  padding: 10px 14px;
+  transition: var(--tran-05);
+}
+nav.close ~ .dashboard {
+  left: 73px;
+  width: calc(100% - 73px);
+}
+.dashboard .top {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 250px);
+  justify-content: space-between;
+  padding: 10px 14px;
+  background-color: var(--panel-color);
+  transition: var(--tran-05);
+}
+nav.close ~ .dashboard .top {
+  left: 73px;
+  width: calc(100% - 73px);
+}
+.dashboard .top .sidebar-toggle {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
 }
