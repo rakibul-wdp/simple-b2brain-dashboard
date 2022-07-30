@@ -298,6 +298,31 @@ body.dark .custom-shape-divider-bottom {
 .custom-shape-divider-bottom .shape-fill {
   fill: #fff;
 }
+/* trusted company style */
+.dash-content .trusted-company {
+  padding-bottom: 4rem;
+}
+body.dark .dash-content .trusted-company {
+  background-color: var(--primary-color);
+}
+body.dark .dash-content .trusted-company {
+  color: var(--text-color);
+}
+.dash-content .trusted-company .heading {
+  text-align: center;
+  padding: 10rem 0 3rem 0;
+  font-size: 32px;
+}
+.dash-content .trusted-company .trusted-brand {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 0 13rem;
+}
+.dash-content .trusted-company .trusted-brand img {
+  width: 80%;
+}
 
 /* Responsive Design */
 @media (max-width: 1000px) {
@@ -339,11 +364,46 @@ body.dark .custom-shape-divider-bottom {
     left: 250px;
     width: calc(100% - 250px);
   }
+  .dash-content .trusted-company .trusted-brand {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+    padding: 0 7rem;
+  }
 }
 
 @media (max-width: 780px) {
+  .dash-content .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem 0;
+  }
+  .dash-content .trusted-company .trusted-brand {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+    padding: 0 5rem;
+  }
 }
 @media (max-width: 560px) {
+  .dash-content .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem 0;
+  }
+  .dash-content .trusted-company .trusted-brand {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    padding: 0 3rem;
+  }
 }
 @media (max-width: 400px) {
   nav {
@@ -383,5 +443,19 @@ body.dark .custom-shape-divider-bottom {
   nav.close ~ .dashboard .top {
     left: 0;
     width: 100%;
+  }
+  .dash-content .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 8rem 0;
+  }
+  .dash-content .trusted-company .trusted-brand {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    padding: 0 3rem;
   }
 }
