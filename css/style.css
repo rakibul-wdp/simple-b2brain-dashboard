@@ -323,6 +323,44 @@ body.dark .dash-content .trusted-company {
 .dash-content .trusted-company .trusted-brand img {
   width: 80%;
 }
+/* customer review style */
+.dash-content .customer-review {
+  background-color: #f7f7f7;
+  padding: 0 13rem;
+}
+body.dark .dash-content .customer-review {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+.dash-content .customer-review .heading {
+  text-align: center;
+  font-size: 32px;
+  padding-top: 2rem;
+}
+.dash-content .customer-review .card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem 0 4rem 0;
+}
+.dash-content .customer-review .single-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-color);
+  border-radius: 1rem;
+}
+.dash-content .customer-review .single-card .quote {
+  width: 10%;
+  margin-top: -7rem;
+}
+.dash-content .customer-review .single-card .customer {
+  width: 25%;
+}
+.dash-content .customer-review .single-card p {
+  width: 18rem;
+}
 
 /* Responsive Design */
 @media (max-width: 1000px) {
@@ -388,6 +426,17 @@ body.dark .dash-content .trusted-company {
     align-items: center;
     padding: 0 5rem;
   }
+  .dash-content .customer-review {
+    padding: 0 3rem;
+  }
+  .dash-content .customer-review .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0;
+  }
+  .dash-content .customer-review .single-card {
+    padding: 2rem;
+  }
 }
 @media (max-width: 560px) {
   .dash-content .banner-content {
@@ -403,6 +452,17 @@ body.dark .dash-content .trusted-company {
     grid-gap: 2rem;
     align-items: center;
     padding: 0 3rem;
+  }
+  .dash-content .customer-review {
+    padding: 0 3rem;
+  }
+  .dash-content .customer-review .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0;
+  }
+  .dash-content .customer-review .single-card {
+    padding: 0rem;
   }
 }
 @media (max-width: 400px) {
@@ -457,5 +517,16 @@ body.dark .dash-content .trusted-company {
     grid-gap: 1rem;
     align-items: center;
     padding: 0 3rem;
+  }
+  .dash-content .customer-review {
+    padding: 0 3rem;
+  }
+  .dash-content .customer-review .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 3rem 0;
+  }
+  .dash-content .customer-review .single-card {
+    padding: 1rem;
   }
 }
